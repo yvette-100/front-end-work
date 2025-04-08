@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <div style="padding: 20px;">
+    
+    <h1>Log in form</h1>
+    <form action="">
+
+            <label for="handleNAme">Name</label>
+        <input type="text" name="handleNAme" id="handleNAme" required> <br><br>
+
+        <label for="handleEmail">Email</label>
+        <input type="text" name="handleEmail" id="handleEmail" required> <br><br>
+
+        <label for="handleNumber">Number</label>
+        <input type="number" placeholder="please enter phone number" id="handleNumber" required> <br><br>
+
+        <button id="handleSubmit">submit</button>
+
+
+    </form>
+
+</div>
+
+
+    <script>
+   
+   let submit = document.getElementById("handleSubmit").addEventListener('click',Myfunction);
+
+   function Myfunction(event) {
+    event.preventDefault();
+
+    let x = document.getElementById("handleNAme");
+    let y = document.getElementById("handleEmail");
+    let z = document.getElementById("handleNumber");
+
+    if (x.value === '' || y.value === '' || z.value === '') {
+        alert('Please fill all form fields');
+    } else {
+        alert('Form submitted successfully!');
+    }
+}
+
+    </script>
+
+    
+
+    
+</body>
+</html>
